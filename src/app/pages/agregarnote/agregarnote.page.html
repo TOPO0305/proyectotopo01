@@ -1,0 +1,144 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>agregarnote</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">agregarnote</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+-->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="'/home'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Página Principal</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/administrador'">
+        <ion-icon name="shield-outline"></ion-icon>
+        <ion-label>Administrador</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/carrito'">
+        <ion-icon name="bag-check-outline"></ion-icon>
+        <ion-label>Mi carrito</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/miscompras'">
+        <ion-icon name="bag-check-outline"></ion-icon>
+        <ion-label>Mis compras</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/perfil'">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Mi Perfil</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/login'">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menú</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <div id="logo">
+        <img src="assets/a.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Nombre" labelPlacement="stacked" placeholder="NOTEBOOK ASUS VIVOBOOK GO 14 E1404"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-select label="Marca">
+            <ion-select-option>ASUS</ion-select-option>
+            <ion-select-option>HP</ion-select-option>
+            <ion-select-option>LENOVO</ion-select-option>
+            <ion-select-option>ACER</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Descripción" labelPlacement="stacked" placeholder="INTEL CORE I3 8 GB RAM 256 GB 14"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="cash-outline"></ion-icon>
+          <ion-input label="Precio" labelPlacement="stacked" placeholder="650000"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Color" labelPlacement="stacked" placeholder="Negro"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Sistema Operativo" labelPlacement="stacked" placeholder="Windows 11 Pro"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Procesador" labelPlacement="stacked" placeholder="Intel® Core™ i7-1355U 1.7GHz"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Graficos" labelPlacement="stacked" placeholder="Intel Iris Xᵉ"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Pantalla" labelPlacement="stacked" placeholder="14,0, OLED, WQXGA+ (2880 x 1800) 16:10"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Memoria" labelPlacement="stacked" placeholder="32GB LPDDR5"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="laptop-outline"></ion-icon>
+          <ion-input label="Almacenamiento" labelPlacement="stacked" placeholder="1TB M.2 2280 NVMe™ PCIe® 4.0 SSD"></ion-input>
+        </ion-item>
+        <ion-item class="counter">
+          <ion-input label="Cantidad"></ion-input>
+          <button onclick="this.nextElementSibling.stepDown()">-</button>
+          <input type="number" value="0" min="0">
+          <button onclick="this.previousElementSibling.stepUp()">+</button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="images-outline"></ion-icon>
+          <ion-input type="file" accept="image/*" label="Imagén" labelPlacement="stacked" placeholder=""></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" routerLink="/administrador">Agregar Notebook</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

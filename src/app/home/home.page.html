@@ -1,0 +1,141 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+</ion-content>
+-->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Principal</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item [routerLink]="'/home'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Página Principal</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/administrador'">
+        <ion-icon name="shield-outline"></ion-icon>
+        <ion-label>Administrador</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/carrito'">
+        <ion-icon name="bag-check-outline"></ion-icon>
+        <ion-label>Mi carrito</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/miscompras'">
+        <ion-icon name="bag-check-outline"></ion-icon>
+        <ion-label>Mis compras</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/perfil'">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Mi Perfil</ion-label>
+      </ion-item>
+      <ion-item [routerLink]="'/login'">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menú</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <div id="logo">
+        <img src="assets/a.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <h6>Bienvenido/a {{ Nombre }} {{ Apellido }}</h6>
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <div id="imagenc">
+          <img src="assets/Notebook-ASUS-Expertbook-B9.jpg" alt="">
+          
+          <ion-item>
+            <ion-text></ion-text>
+              <ion-text>Notebook ASUS Expertbook B9 </ion-text>
+          </ion-item>
+          <ion-item>
+              <ion-text>Intel Core i7-1355U, 14" OLED, RAM 32GB, SSD 1TB, W11Pro</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>Precio:  {{ 500000 | currency:'CLP'}}</ion-text>
+          </ion-item>
+        </div>
+        <ion-button expand="block" routerLink="/detallenote1">Ver mas detalles</ion-button>
+        <ion-button expand="block">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          Agregar a mi carro
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <div id="imagenc">
+          <img src="assets/Notebook-Lenovo-K14-Gen-1.jpg" alt="">
+          
+          <ion-item>
+            <ion-text></ion-text>
+              <ion-text>Notebook Lenovo K14 Gen 1</ion-text>
+          </ion-item>
+          <ion-item>
+              <ion-text>14" FHD, Ryzen 3 5400U, RAM 8GB, SSD 512GB, W11 Pro</ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text>Precio: {{ 500940 | currency:'CLP'}} </ion-text>
+          </ion-item>
+        </div>
+        <ion-button expand="block" routerLink="/detallenote2">Ver mas detalles</ion-button>
+        <ion-button expand="block">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          Agregar a mi carro
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+    <div class="line-text">
+      <span class="lines">
+        <span class="text">OFERTAS</span>
+      </span>
+  </div>
+ 
+  </div>
+
+</ion-content>

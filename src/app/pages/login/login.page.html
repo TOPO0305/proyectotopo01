@@ -1,0 +1,55 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+no se si dejarlo xd
+-->
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="end">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+  </ion-header>
+
+
+
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <div id="logo">
+        <img src="assets/a.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input label="Correo" labelPlacement="stacked" placeholder="hola@gmail.com" [(ngModel)]="inputUsuario"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input label="Contraseña" labelPlacement="stacked" type="password" value="password" placeholder="******" [(ngModel)]="inputPassword"></ion-input>
+        </ion-item>
+      <div class="centrarb">
+        <ion-button expand="block" ion-button expand="full" (click)="iniciarSesion()">Iniciar Sesión</ion-button>
+      </div>
+      <div class="centrar-text">
+        <span routerLink="/olvidepassword">Olvidé mi contraseña</span>
+    </div>    
+      </ion-card-content>
+    </ion-card>
+    <div class="line-text">
+      <span class="lines">
+        <span class="text">¿No tienes una cuenta?</span>
+      </span>
+    </div>
+    <ion-button shape="round" routerLink="/registrar" class="centered-button">Registrarme</ion-button>
+    
+  </div>
+</ion-content>

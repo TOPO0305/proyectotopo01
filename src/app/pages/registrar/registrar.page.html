@@ -1,0 +1,107 @@
+<!--
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>registrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">registrar</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+-->
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="end">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <div id="logo">
+        <img src="assets/a.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <form >
+    <ion-card>
+      <!--Campo Nombre-->
+
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input label="Nombre" labelPlacement="stacked" placeholder="Ingrese Nomre" [(ngModel)]="Nombre"></ion-input>
+      </ion-item>
+
+      <!--Campo Apellido-->
+
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input label="Apellido" labelPlacement="stacked" placeholder="Ingrese Apellido" [(ngModel)]="Apellido"></ion-input>
+      </ion-item>
+
+      <!--Campo Rut-->
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input label="RUT" labelPlacement="stacked" placeholder="Ingrese sin puntos ni guion" [(ngModel)]="Rut"></ion-input>
+      </ion-item>
+
+      <!--Campo Correo-->
+
+      <ion-item>
+        <ion-icon name="mail"></ion-icon>
+        <ion-input label="Correo" labelPlacement="stacked" placeholder="Ingrese Correo" [(ngModel)]="Correo"></ion-input>
+      </ion-item>
+
+      <!--Campo Telefono-->
+
+      <ion-item>
+        <ion-icon name="call-outline"></ion-icon>
+        <ion-input label="Telefono" labelPlacement="stacked" placeholder="Ingrese numero (9)" [(ngModel)]="Telefono"></ion-input>
+      </ion-item>
+
+      <!--Campo Genero-->
+
+      <ion-item>
+        <ion-label position="floating">Genero</ion-label>
+        <ion-select [(ngModel)]="Genero">
+          <ion-select-option value="1" ion-label="Hombre">Hombre</ion-select-option>
+          <ion-select-option value="2" ion-label="Mujer">Mujer</ion-select-option>
+          <ion-select-option value="3" ion-label="Otro">Otro</ion-select-option>
+        </ion-select>
+         
+      </ion-item>
+
+      <!--Campo Contraseña-->
+
+      <ion-item>
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-input label="Contraseña" labelPlacement="stacked" type="password" value="password" [(ngModel)]="Passw"></ion-input>
+      </ion-item>
+
+      <!--Campo Rep Contraseña-->
+
+      <ion-item>
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-input label="Repetir Contraseña" labelPlacement="stacked" type="password" value="password"></ion-input>
+      </ion-item>
+
+    </ion-card>
+
+    <!-- boton Registro-->
+
+    <ion-button  expand="block" (click)="IrPaginaPerfil()" shape="round" routerLink="/login" class="centered-button" [disabled]="formulario.invalid">Registrarme</ion-button>
+
+  </form>
+
+  <!--boton Iniciar Sesion-->
+
+</ion-content>
